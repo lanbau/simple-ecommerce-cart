@@ -1,8 +1,10 @@
-import { SET_CURRENT, SET_BOOKS } from "./actionTypes";
+import { SET_CURRENT, SET_BOOKS, SET_BOOK, UPDATE_CART, UPDATE_ORDERS, CLEAR_CART } from "./actionTypes";
 
 const initialState = {
     currentItem: {},
-    books: []
+    books: [],
+    cart: [],
+    orders: []
 }
 
 const reducers = (state = initialState, action) => {
@@ -18,6 +20,30 @@ const reducers = (state = initialState, action) => {
                 ...state,
                 books: action.payload,
                 
+            }
+        case SET_BOOK:
+            return {
+                ...state,
+                book: action.payload,
+                
+            }
+        
+        case UPDATE_CART:
+            return {
+                ...state,
+                cart: state.cart.concat(action.payload)
+            }
+
+        case CLEAR_CART:
+            return {
+                ...state,
+                cart: []
+            }
+
+        case UPDATE_ORDERS:
+            return {
+                ...state,
+                orders: state.orders.concat(action.payload)
             }
         default:
             return state

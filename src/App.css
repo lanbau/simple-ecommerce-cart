@@ -1,3 +1,7 @@
+body {
+  font-family: 'Montserrat';
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-nav {
+  display: flex;
+  align-items: center; 
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(190, 190, 190, 0.274);
+}
+
+.app-ul {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  align-items: center;
+}
+
+.app-ul > li {
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.app-ul > li > a {
+  text-decoration: none;
+
+}
+
+.app-logo {
+  flex: 1;
+  font-weight: 700;
 }

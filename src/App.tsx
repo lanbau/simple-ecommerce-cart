@@ -7,29 +7,47 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { useDispatch } from 'react-redux'
-import { setCurrent } from './store/actions'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchBooks } from './store/actions'
+import Home from './pages/Home'
+import Book from './pages/Book'
+import Checkout from './pages/Checkout'
+import Order from './pages/Order'
 
+interface BookInterface {
+  body: string;
+  id: number;
+  price: number;
+  src: string;
+  title: string;
+  userId: number;
+}
+
+interface RootState {
+  book: BookInterface
+}
 function App() {
   const dispatch = useDispatch()
+  const { book } = useSelector((state: RootState) => state) 
 
   useEffect(() => {
-    dispatch({ type: 'FETCH_BOOKS' })
+    dispatch(fetchBooks())
   }, [])
 
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
+        <nav className="app-nav">
+          <div className="app-logo">eCommerce Site</div>
+          <ul className="app-ul">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/order">Orders</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/checkout">Cart</Link>
             </li>
           </ul>
         </nav>
@@ -43,6 +61,15 @@ function App() {
           <Route path="/users">
             <Users />
           </Route>
+          <Route path="/book">
+            <Book />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/order">
+            <Order />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
@@ -52,9 +79,9 @@ function App() {
   )
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
+// function Home() {
+//   return <h2>Home</h2>;
+// }
 
 function About() {
   return <h2>About</h2>;

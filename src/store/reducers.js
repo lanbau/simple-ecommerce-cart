@@ -1,7 +1,8 @@
-import { SET_CURRENT } from "./actionTypes";
+import { SET_CURRENT, SET_BOOKS } from "./actionTypes";
 
 const initialState = {
-    currentItem: {}
+    currentItem: {},
+    books: []
 }
 
 const reducers = (state = initialState, action) => {
@@ -10,6 +11,12 @@ const reducers = (state = initialState, action) => {
             return {
                 ...state,
                 currentItem: action.payload,
+                
+            }
+        case SET_BOOKS:
+            return {
+                ...state,
+                books: action.payload,
                 
             }
         default:

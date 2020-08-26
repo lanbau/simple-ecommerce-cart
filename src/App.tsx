@@ -24,11 +24,11 @@ interface BookInterface {
 }
 
 interface RootState {
-  book: BookInterface
+  cart: BookInterface[]
 }
 function App() {
   const dispatch = useDispatch()
-  const { book } = useSelector((state: RootState) => state) 
+  const { cart } = useSelector((state: RootState) => state) 
 
   useEffect(() => {
     dispatch(fetchBooks())
@@ -47,7 +47,7 @@ function App() {
               <Link to="/order">Orders</Link>
             </li>
             <li>
-              <Link to="/checkout">Cart</Link>
+              <Link to="/checkout">Cart ({cart?.length})</Link>
             </li>
           </ul>
         </nav>

@@ -47,3 +47,23 @@
 .book-buy-button:hover {
     opacity: 0.7;
 }
+
+.book-cancel-button {
+    background-color: rgb(185, 185, 185);
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+
+.book-save-button {
+    background-color: pink;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 16px;
+    border: 0px;
+}

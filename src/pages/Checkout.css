@@ -5,13 +5,15 @@
 }
 .single-checkout {
     display: flex;
+    justify-content: 'center';
 }
 
 .checkout-container {
     margin-top: 50px;
+    margin-left: 20px;
     flex: 1;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
 }
 

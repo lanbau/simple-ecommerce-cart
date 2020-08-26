@@ -9,7 +9,7 @@ const Order = () => {
 
     return <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '0 50px'}}>
        { !orders.length && 'No Orders Made.'}
-        { orders.map((order, index) => <div className="orders" key={order.id}>
+        { orders.reverse().map((order, index) => <div className="orders" key={order.id}>
             <div className="order-title">Order Placed: {convertDate(order.date)} </div>
             <div>
                 

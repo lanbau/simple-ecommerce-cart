@@ -8,7 +8,7 @@ exports[`Orders Page renders orders 1`] = `
       "display": "flex",
       "flexDirection": "column",
       "justifyContent": "center",
-      "marginTop": 16,
+      "padding": "0 50px",
     }
   }
 >

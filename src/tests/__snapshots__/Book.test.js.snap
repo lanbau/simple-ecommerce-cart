@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Book Page renders book 1`] = `
+<div
+  className="single-book"
+>
+  <div
+    className="single-book-src"
+  >
+    <img
+      src="https://picsum.photos/200/300?random=1"
+    />
+  </div>
+  <div>
+    <div
+      className="single-book-title"
+    >
+      Title: 
+      sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+    </div>
+    <div
+      className="single-book-price"
+    >
+      Price: $
+      15
+    </div>
+    <div
+      className="single-book-author"
+    >
+      Author: 
+      1
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "paddingBottom": 32,
+        }
+      }
+    >
+      <div
+        className="book-buy-button"
+        onClick={[Function]}
+      >
+        Add To Cart
+      </div>
+      <div
+        className="book-buy-button"
+        onClick={[Function]}
+      >
+        Buy Now
+      </div>
+    </div>
+    <div
+      className="single-book-description"
+    >
+      Description: 
+      quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto
+    </div>
+  </div>
+</div>
+`;

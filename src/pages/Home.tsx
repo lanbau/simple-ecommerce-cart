@@ -1,6 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setBook } from '../store/actions'
+import { getBooks } from '../selectors';
+import { BookInterface } from '../interfaces'
+
 import './Home.css';
 import {
     BrowserRouter as Router,
@@ -8,26 +11,16 @@ import {
     Route,
     Link
   } from "react-router-dom";
-interface BookInterface {
-    body: string;
-    id: number;
-    price: number;
-    src: string;
-    title: string;
-    userId: number;
-}
 
-interface RootState {
-    books: BookInterface[]
-}
 const Home = () => {
     const dispatch = useDispatch()
-    const { books } = useSelector((state: RootState) => state)
+    const books = useSelector(getBooks)
+    // const { books } = useSelector((state: RootState) => state)
     const handleBook = (book: BookInterface) => {
         dispatch(setBook(book))
     }
     return <div className="books">
-        {books.map( book => {
+        {books?.map( book => {
             const { id, title, body, src } = book
             return (
                 <div className="book" key={id}>

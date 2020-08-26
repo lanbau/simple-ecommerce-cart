@@ -20,6 +20,11 @@ const Checkout = () => {
         history.push('/order')
     }
 
+    const handleCancel = () => {
+        dispatch(clearCart())
+        history.push('/')
+    }
+
     const total = cart.reduce( (total, { price }) => {
         total = total + price
         return total
@@ -95,7 +100,7 @@ const Checkout = () => {
             <div style={{ display: 'flex' }}>
                 {total > 0 && <div onClick={() => handleCheckout()} className="book-buy-button">Checkout</div> }
                 {/* Return to Home */}
-                {total > 0 && <div className="book-cancel-button" onClick={() => history.push('/')}>Cancel</div>}
+                {total > 0 && <div className="book-cancel-button" onClick={() => handleCancel()}>Cancel</div>}
             </div>
             
         </div>

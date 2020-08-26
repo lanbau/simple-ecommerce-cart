@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout Page renders cart 1`] = `
+<div
+  className="single-checkout"
+>
+  <div
+    className="checkout-container"
+  >
+    <div
+      className="checkout-title"
+    >
+      Shipping Address
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "marginBottom": 16,
+          }
+        }
+      >
+        <label
+          style={
+            Object {
+              "width": 150,
+            }
+          }
+        >
+          Name:
+          <br />
+          <input
+            onChange={[Function]}
+            type="text"
+          />
+        </label>
+        <label>
+          Address:
+          <br />
+          <input
+            onChange={[Function]}
+            type="text"
+          />
+        </label>
+        <label>
+          Phone:
+          <br />
+          <input
+            onChange={[Function]}
+            type="text"
+          />
+        </label>
+      </form>
+      <button
+        className="book-save-button"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": 150,
+          }
+        }
+      >
+        Save
+      </button>
+    </div>
+  </div>
+  <div
+    className="checkout-container"
+  >
+    <div
+      className="checkout-title"
+    >
+      Shopping Bag (
+      2
+      )
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <img
+        src="https://picsum.photos/200/300?random=1"
+        style={
+          Object {
+            "height": 50,
+            "marginRight": 8,
+            "width": 50,
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "marginRight": 8,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          qui est esse...
+        </div>
+        <div>
+          $
+          49
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <img
+        src="https://picsum.photos/200/300?random=1"
+        style={
+          Object {
+            "height": 50,
+            "marginRight": 8,
+            "width": 50,
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "marginRight": 8,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          qui est esse...
+        </div>
+        <div>
+          $
+          49
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="checkout-container"
+  >
+    <div
+      className="checkout-title"
+    >
+      Payment Info
+    </div>
+    <div
+      style={
+        Object {
+          "marginBottom": 16,
+        }
+      }
+    >
+      Free Shipping & Tax Free
+    </div>
+    <div
+      style={
+        Object {
+          "fontSize": 25,
+          "marginBottom": 16,
+        }
+      }
+    >
+      Total: $
+      98
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      <div
+        className="book-buy-button"
+        onClick={[Function]}
+      >
+        Checkout
+      </div>
+      <div
+        className="book-cancel-button"
+        onClick={[Function]}
+      >
+        Cancel
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,23 +1,24 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setBook } from '../store/actions'
-import { getBooks } from '../selectors';
+import getBooks from '../selectors/bookSelector';
 import { BookInterface } from '../interfaces'
-
+import { updateCart } from '../store/actions';
+import { useHistory } from "react-router-dom";
 import './Home.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const dispatch = useDispatch()
     const books = useSelector(getBooks)
-    // const { books } = useSelector((state: RootState) => state)
+    const history = useHistory()
+    
     const handleBook = (book: BookInterface) => {
         dispatch(setBook(book))
+    }
+    const buyNow = (book: BookInterface) => {
+        dispatch(updateCart(book))
+        history.push('/checkout')
     }
     return <div className="books">
         {books?.map( book => {
@@ -29,7 +30,7 @@ const Home = () => {
                         <Link to="/book">{title}</Link>
                     </div>
                     <div className="book-description">{body}</div>
-                    <div className="book-buy-button">Buy Now</div>
+                    <div className="book-buy-button" onClick={() => buyNow(book)}>Buy Now</div>
                 </div>
             )
         })}

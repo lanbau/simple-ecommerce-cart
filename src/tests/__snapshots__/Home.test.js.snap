@@ -35,6 +35,7 @@ nostrum rerum est autem sunt rem eveniet architecto
     </div>
     <div
       className="book-buy-button"
+      onClick={[Function]}
     >
       Buy Now
     </div>

@@ -3,25 +3,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import './Checkout.css';
 import { updateOrders, clearCart} from '../store/actions'
 import { useHistory } from "react-router-dom";
+import getCart from '../selectors/cartSelector';
 
-interface BookInterface {
-    body: string;
-    id: number;
-    price: number;
-    src: string;
-    title: string;
-    userId: number;
-}
-
-interface RootState {
-    cart: BookInterface[]
-}
 const Checkout = () => {
-    const { cart } = useSelector((state: RootState) => state)
+    const cart = useSelector(getCart) || []
     const dispatch = useDispatch()
     const history = useHistory()
     const handleCheckout = () => {
         let newOrder = {
+            id: Math.floor(Math.random() * 100),
             date: new Date(),
             items: cart
         }
@@ -40,7 +30,6 @@ const Checkout = () => {
     const [phone, setPhone] = useState('')
 
     const handleSubmit = (event: any) => {
-        alert('A name was submitted: ' + name);
         event.preventDefault();
         const result = {
             name, 
@@ -82,8 +71,8 @@ const Checkout = () => {
         </div>
         <div className="checkout-container">
             <div className="checkout-title">Shopping Bag ({cart.length})</div>
-            {cart.map(({ title, src, price }) => {
-                return <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+            {cart.map(({ userId, title, src, price }) => {
+                return <div key={userId} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
                     <img src={src} style={{ width: 50, height: 50, marginRight: 8 }} />
                     <div style={{ display: 'flex', flexDirection: 'column', marginRight: 8 }}>
                         <div style={{ fontWeight: 'bold' }}>{`${title.substring(0, 30)}...`}</div>

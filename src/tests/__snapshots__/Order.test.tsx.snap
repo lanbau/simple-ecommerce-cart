@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Orders Page renders orders 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "marginTop": 16,
+    }
+  }
+>
+  <div
+    className="orders"
+  >
+    <div
+      className="order-title"
+    >
+      Order Placed: 
+      2020-08-26
+       
+    </div>
+    <div>
+      <div
+        className="order"
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <img
+          src="https://picsum.photos/200/300?random=1"
+          style={
+            Object {
+              "borderRadius": 10,
+              "height": 150,
+              "marginBottom": 8,
+              "marginRight": 16,
+              "width": 150,
+            }
+          }
+        />
+        <div>
+          <div
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            qui est esse
+          </div>
+          <div
+            style={
+              Object {
+                "maxWidth": 400,
+              }
+            }
+          >
+            est rerum tempore vitae
+sequi sint nihil reprehenderit dolor beatae ea dolores neque
+fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis
+qui aperiam non debitis possimus qui neque nisi nulla
+          </div>
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Price: $
+            41
+          </div>
+        </div>
+      </div>
+      <div
+        className="order"
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <img
+          src="https://picsum.photos/200/300?random=1"
+          style={
+            Object {
+              "borderRadius": 10,
+              "height": 150,
+              "marginBottom": 8,
+              "marginRight": 16,
+              "width": 150,
+            }
+          }
+        />
+        <div>
+          <div
+            style={
+              Object {
+                "fontSize": 24,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            qui est esse
+          </div>
+          <div
+            style={
+              Object {
+                "maxWidth": 400,
+              }
+            }
+          >
+            est rerum tempore vitae
+sequi sint nihil reprehenderit dolor beatae ea dolores neque
+fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis
+qui aperiam non debitis possimus qui neque nisi nulla
+          </div>
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Price: $
+            41
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

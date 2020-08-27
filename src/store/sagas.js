@@ -7,7 +7,7 @@ export function* fetchBooks() {
       const payload = yield call(api.getBooks);
       yield put(actions.setBooks(payload))
     } catch (err) {
-      console.log(err)
+      yield put(actions.setError(err.toString()))
     }
 }
 export function* watchIncrementAsync() {

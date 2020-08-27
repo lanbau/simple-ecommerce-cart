@@ -1,4 +1,5 @@
-import { SET_CURRENT, SET_BOOKS, SET_BOOK, FETCH_BOOKS, UPDATE_CART, CLEAR_CART, UPDATE_ORDERS } from "./actionTypes";
+import { SET_CURRENT, SET_BOOKS, SET_BOOK, FETCH_BOOKS, UPDATE_CART, CLEAR_CART, UPDATE_ORDERS, SET_ERROR } from "./actionTypes";
+import { Z_STREAM_ERROR } from "zlib";
 
 export const setCurrent = item => ({
   type: SET_CURRENT,
@@ -30,5 +31,10 @@ export const clearCart = item => ({
 
 export const updateOrders = item => ({
   type: UPDATE_ORDERS,
+  payload: item
+})
+
+export const setError = item => ({
+  type: SET_ERROR,
   payload: item
 })

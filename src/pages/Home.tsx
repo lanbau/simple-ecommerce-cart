@@ -21,6 +21,7 @@ const Home = () => {
         history.push('/checkout')
     }
     return <div className="books">
+        {books?.length < 0 && 'Error with API. No Books Fetched.'}
         {books?.map( book => {
             const { id, title, body, src } = book
             return (

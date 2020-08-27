@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setBook } from '../store/actions'
-import getBooks from '../selectors/bookSelector';
+import getBooks from '../selectors/booksSelector';
 import { BookInterface } from '../interfaces'
 import { updateCart } from '../store/actions';
 import { useHistory } from "react-router-dom";

@@ -3,24 +3,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import './Book.css';
 import { updateCart } from '../store/actions';
 import { useHistory } from "react-router-dom";
+import { BookInterface } from '../interfaces'
+import getBook from '../selectors/bookSelector';
 
-interface BookInterface {
-    body: string;
-    id: number;
-    price: number;
-    src: string;
-    title: string;
-    userId: number;
-}
-
-interface RootState {
-    book: BookInterface
-}
 const Book = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    const { book } = useSelector((state: RootState) => state)
+    const book = useSelector(getBook)
     const { title, body, price, userId, src } = book || {}
 
     const addToCart = (book: BookInterface) => {

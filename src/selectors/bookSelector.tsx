@@ -1,7 +1,7 @@
 import { BookInterface } from '../interfaces'
 
 interface RootState {
-    books: BookInterface[]
+    book: BookInterface
 }
 
-export default (state: RootState) => state.books
+export default (state: RootState) => state.book

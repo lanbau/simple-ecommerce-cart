@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lanbau/simple-ecommerce-cart.svg?branch=master)](https://travis-ci.org/lanbau/simple-ecommerce-cart)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -38,7 +38,7 @@ function App() {
     <Router>
       <div>
         <nav className="app-nav">
-         <div className="app-logo"> <Link to="/">eCommerce Site</Link></div>
+         <div className="app-logo"> <Link to="/">eCommerce Site.</Link></div>
           <ul className="app-ul">
             <li>
               <Link to="/">Home</Link>
